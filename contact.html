@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>About | Gautam Pandey</title>
+  <title>Contact | Gautam Pandey</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -25,42 +25,45 @@
 <div class="container">
 
   <div class="card">
-    <h2>About Me</h2>
-    <p>I’m <strong>Gautam Pandey</strong>, a Technical Lead with 9+ years of experience in the Telecom industry specialising in LTE & 5G Protocol Testing, RF QA, UE Conformance Testing, Automation and Log Analysis.</p>
+    <h2>Contact Me</h2>
 
-    <p>I’ve worked on PCAT/PCT, RCT/RCAT/REG, Protocol Conformance Testing and Carrier Acceptance Testing supporting major US operators like Verizon, AT&T, Dish and T-Mobile.</p>
-
-    <p>I am passionate about building reliable telecom systems, improving test quality, and collaborating with engineering teams to deliver robust wireless products.</p>
+    <form action="mailto:gautampandey2812@gmail.com" method="post">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </div>
 
   <div class="card">
-    <h3>Key Skills</h3>
-    <ul>
-      <li>LTE / 5G NR Protocol Testing</li>
-      <li>UE Protocol Conformance (RRC, RLC, MAC, PDCP)</li>
-      <li>RF QA & Network Optimisation</li>
-      <li>Automation & Regression Testing</li>
-      <li>Python & TTCN-3 scripting</li>
-      <li>IMS / VoLTE • S1AP • X2AP • GTP-C</li>
-      <li>Log Analysis & Debugging</li>
-    </ul>
+    <h3>Upload Your Photo (Preview only)</h3>
+    <input type="file" id="photoUpload" accept="image/*">
+    <img id="preview" />
   </div>
 
   <div class="card">
-    <h3>I can also:</h3>
+    <h3>Social Links</h3>
     <ul>
-      <li>✅ Add animations</li>
-      <li>✅ Create dashboards</li>
-      <li>✅ Improve logo & branding</li>
-      <li>✅ Add download-resume button</li>
-      <li>✅ Build a contact backend</li>
-      <li>✅ Create a blog section</li>
+      <li><a href="https://github.com/GautamPandey28" target="_blank">GitHub</a></li>
     </ul>
   </div>
 
 </div>
 
 <footer>© 2025 Gautam Pandey</footer>
+
+<script>
+  const upload=document.getElementById("photoUpload");
+  const preview=document.getElementById("preview");
+  upload.addEventListener("change",function(){
+    const file=this.files[0];
+    if(file){
+      const r=new FileReader();
+      r.onload=function(){preview.src=this.result;}
+      r.readAsDataURL(file);
+    }
+  });
+</script>
 
 </body>
 </html>
