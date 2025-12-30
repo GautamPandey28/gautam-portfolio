@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Gautam Pandey | Telecom & 5G Testing Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Portfolio of Gautam Pandey - Telecom Technical Lead specializing in LTE/5G Protocol Testing, RF QA and Automation." />
+<meta charset="UTF-8">
+<title>Gautam Pandey | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portfolio of Gautam Pandey — Telecom Technical Lead specializing in LTE/5G Protocol Testing, RF QA, and Automation.">
 
 <link rel="stylesheet" href="style.css">
 
-<meta property="og:title" content="Gautam Pandey Portfolio" />
-<meta property="og:description" content="Telecom Technical Lead - LTE/5G Testing & RF QA" />
-<meta property="og:image" content="profile.jpg" />
+<meta property="og:title" content="Gautam Pandey Portfolio">
+<meta property="og:description" content="Telecom Technical Lead — LTE/5G Testing & RF QA">
+<meta property="og:image" content="profile.jpg">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXX');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXX');
 </script>
 
 </head>
@@ -42,10 +42,11 @@
   <div class="hero-text">
     <h1>Hello, I'm <span style="color:#6c5ce7;">Gautam Pandey</span></h1>
     <p>Technical Lead • LTE/5G Protocol Testing • RF QA • Automation</p>
-    <a class="btn" href="Gautam_Technical_Lead_CV.pdf" download>📄 Download My Resume</a>
+    <a class="btn" href="Gautam_Technical_Lead_CV.pdf" download>📄 Download Resume</a>
   </div>
+
   <div class="hero-img">
-    <img src="profile.jpg" alt="Profile photo of Gautam Pandey" />
+    <img src="profile.jpg" alt="Profile photo of Gautam Pandey">
   </div>
 </section>
 
@@ -68,7 +69,7 @@
 
   <div class="card">
     <h2>Latest Blog Updates</h2>
-    <p>Visit the blog section for telecom insights and tutorials!</p>
+    <p>Visit the Blog section for tutorials and telecom insights!</p>
   </div>
 
 </div>
@@ -77,38 +78,39 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-  const btn = document.getElementById("themeBtn");
-  const saved = localStorage.getItem("theme");
-  if(saved === "dark"){document.body.classList.add("dark"); btn.textContent="☀️ Light";}
+const btn=document.getElementById("themeBtn");
+const saved=localStorage.getItem("theme");
+if(saved==="dark"){document.body.classList.add("dark");btn.textContent="☀️ Light";}
 
-  btn.onclick = () => {
-    document.body.classList.toggle("dark");
-    if(document.body.classList.contains("dark")){
-      localStorage.setItem("theme","dark");
-      btn.textContent="☀️ Light";
-    } else {
-      localStorage.setItem("theme","light");
-      btn.textContent="🌙 Dark";
+btn.onclick=() => {
+  document.body.classList.toggle("dark");
+  if(document.body.classList.contains("dark")){
+    localStorage.setItem("theme","dark");btn.textContent="☀️ Light";
+  } else {
+    localStorage.removeItem("theme");btn.textContent="🌙 Dark";
+  }
+};
+
+new Chart(
+  document.getElementById('skillsChart'),
+  {
+    type:'radar',
+    data:{
+      labels:['LTE/5G','RF QA','Automation','Conformance','Log Analysis','IMS/VoLTE'],
+      datasets:[{
+        label:'Skill %',
+        data:[95,90,85,92,88,80],
+        backgroundColor:'rgba(108,92,231,0.25)',
+        borderColor:'#6c5ce7',
+        borderWidth:2
+      }]
+    },
+    options:{
+      responsive:true,
+      scales:{r:{suggestedMax:100}}
     }
   }
-
-  new Chart(
-    document.getElementById('skillsChart'), {
-      type: 'radar',
-      data: {
-        labels: ['LTE/5G','RF QA','Automation','Conformance','Log Analysis','IMS/VoLTE'],
-        datasets: [{
-          label: 'Skill Strength',
-          data: [95,90,85,92,88,80],
-          backgroundColor: 'rgba(108,92,231,0.2)',
-          borderColor: '#6c5ce7'
-        }]
-      },
-      options: {
-        scales: { r: { suggestedMin: 0, suggestedMax: 100 } }
-      }
-    }
-  );
+);
 </script>
 
 </body>
