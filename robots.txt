@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gautampandey28.github.io/gautam-portfolio/sitemap.xml
