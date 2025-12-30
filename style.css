@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  color: #222;
+}
+
+/* Header / Nav */
+header {
+  background: linear-gradient(90deg, #ff6b6b, #6c5ce7, #00b894);
+  padding: 20px 0;
+  color: white;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  margin: 20px 0;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* Contact form */
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 999px;
+  background: #6c5ce7;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+/* Responsive */
+@media(max-width: 700px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+}
