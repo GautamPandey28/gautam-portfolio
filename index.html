@@ -152,11 +152,50 @@ window.addEventListener("scroll", () => {
 
 </body>
 </html>
-<form action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
-  <input name="name" type="text" placeholder="Your Name" required>
-  <input name="email" type="email" placeholder="Email" required>
-  <textarea name="message" rows="6" placeholder="Message" required></textarea>
-  <button type="submit" class="btn sec">Send Message</button>
-</form>
+<section id="contact" class="fade-section contact-section">
+
+  <div class="contact-wrapper">
+
+    <!-- Left panel: contact info -->
+    <div class="contact-info">
+      <h2>📩 Get in Touch</h2>
+      <p>Whether you’re interested in LTE/5G protocol testing, automation, RF QA, or just want to connect, feel free to send me a message — I typically reply within 24 hours.</p>
+
+      <ul>
+        <li>📍 Bengaluru, India</li>
+        <li>📧 <a href="mailto:gautampandey2812@gmail.com">gautampandey2812@gmail.com</a></li>
+        <li>🔗 <a href="https://www.linkedin.com/in/gautampandey28/" target="_blank">LinkedIn Profile</a></li>
+      </ul>
+    </div>
+
+    <!-- Right panel: contact form -->
+    <form class="contact-form"
+      action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
+      method="POST">
+
+      <div class="field">
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="field">
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="field">
+        <label>Your Message</label>
+        <textarea name="message" rows="6" placeholder="Write your message…" required></textarea>
+      </div>
+
+      <button type="submit" class="btn sec">
+        Send Message 🚀
+      </button>
+    </form>
+
+  </div>
+
+</section>
+
 
 
