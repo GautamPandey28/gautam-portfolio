@@ -112,6 +112,43 @@ new Chart(
   }
 );
 </script>
+<script>
+// Fade-in animation
+const fadeSections = document.querySelectorAll(".fade-section");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+fadeSections.forEach(section => observer.observe(section));
+
+// Highlight active menu item
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+  let scrollPos = window.scrollY + 120;
+
+  sections.forEach(section => {
+    if (scrollPos >= section.offsetTop &&
+        scrollPos < section.offsetTop + section.offsetHeight) {
+
+      let id = section.getAttribute("id");
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(id)) {
+          link.classList.add("active");
+        }
+      });
+    }
+  });
+});
+</script>
 
 </body>
 </html>
@@ -121,4 +158,5 @@ new Chart(
   <textarea name="message" rows="6" placeholder="Message" required></textarea>
   <button type="submit" class="btn sec">Send Message</button>
 </form>
+
 
